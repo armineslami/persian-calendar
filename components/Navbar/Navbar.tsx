@@ -18,11 +18,13 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <div
       id="persian-calendar-navbar"
-      className="flex flex-col md:flex-row justify-between items-start md:items-center sticky top-0 z-50 h-fit space-y-2 pb-2 md:pb-0"
+      className={`flex ${
+        hasModeSwitch ? "flex-col" : "flex-row"
+      } md:flex-row justify-between items-center md:items-center sticky top-0 z-50 h-fit space-y-2 pb-2 md:pb-0`}
       style={{ background: theme.background }}
     >
       {/* Year Title */}
-      <p className="select-none">
+      <p className="select-none self-start">
         {mode === PersianCalendarMode.YEAR ? (
           <span
             key={year}
@@ -53,7 +55,11 @@ const Navbar: React.FC<NavbarProps> = ({
         )}
       </p>
 
-      <div className="flex justify-between gap-4 w-full md:w-fit">
+      <div
+        className={`flex ${
+          hasModeSwitch ? "justify-between" : "justify-end"
+        } gap-4 w-full md:w-fit`}
+      >
         {/* Mode Change */}
         {hasModeSwitch && (
           <div
