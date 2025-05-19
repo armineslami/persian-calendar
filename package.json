@@ -1,6 +1,6 @@
 {
   "name": "@armin-eslami/persian-calendar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Big persian calendar component made by react.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
