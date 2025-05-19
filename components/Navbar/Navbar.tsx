@@ -121,8 +121,11 @@ const Navbar: React.FC<NavbarProps> = ({
           </svg>
           <p
             onClick={() => onToday?.()}
-            className="cursor-pointer select-none"
-            style={{ fontSize: theme.fontSize?.body }}
+            className="cursor-pointer select-none px-4 py-2 rounded-lg text-white font-bold"
+            style={{
+              fontSize: theme.fontSize?.body,
+              background: theme.primary,
+            }}
           >
             امروز
           </p>
