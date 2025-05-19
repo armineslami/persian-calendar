@@ -31,6 +31,18 @@ Big **Persian Calendar** component built with React, Typescript and Tailwindcss.
 npm install @armin-eslami/persian-calendar
 ```
 
+Then add the package to your tailwind.config.ts
+
+```bash
+export default {
+  content: [
+    ...
+    "./node_modules/@armin-eslami/persian-calendar/**/*.{js,ts,jsx,tsx}",
+  ],
+  ...
+}
+```
+
 ## Example Usage
 
 ### 1. Uncontrolled component
