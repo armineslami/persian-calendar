@@ -1,0 +1,8 @@
+.month-row-text {
+    color: var(--text);
+}
+
+.month-row-text-hover:hover {
+    color: #fff;
+    background-color: var(--hover-bg);
+}
