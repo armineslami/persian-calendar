@@ -12,7 +12,6 @@ module.exports = {
       sourcemap: true,
     },
   ],
-  // 🔥 REMOVE 'tslib' from external
   external: ["react", "react-dom"],
   plugins: [
     peerDepsExternal(),
@@ -20,11 +19,10 @@ module.exports = {
     typescript({
       tsconfig: "tsconfig.json",
       useTsconfigDeclarationDir: true,
-      clean: true, // optional but useful
+      clean: true,
     }),
     postcss({
       inject: true,
-      // extract: true,
       minimize: true,
       modules: false,
       config: {
