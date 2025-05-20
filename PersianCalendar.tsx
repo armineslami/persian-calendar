@@ -178,7 +178,7 @@ const PersianCalendar: React.FC<PersianCalendarProps> = ({
     <div
       dir="rtl"
       id="persian-calendar-container"
-      className={cn("space-y-8 md:space-y-2", className)}
+      className={cn("persian-calendar space-y-8 md:space-y-2", className)}
       style={{
         fontFamily: theme.fontFamily,
         background: theme.background,

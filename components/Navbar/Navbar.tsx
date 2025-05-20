@@ -1,6 +1,5 @@
 import React from "react";
 import NavbarProps from "./props/NavbarProps";
-import "./styles.css";
 import { PersianCalendarMode } from "../../props";
 import { getMonthName } from "../../lib/utils";
 
@@ -18,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <div
       id="persian-calendar-navbar"
-      className={`flex ${
+      className={`persian-calendar flex ${
         hasModeSwitch ? "flex-col" : "flex-row"
       } md:flex-row justify-between items-center md:items-center sticky top-0 z-50 h-fit space-y-2 pb-2 md:pb-0`}
       style={{ background: theme.background }}

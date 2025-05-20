@@ -22,7 +22,7 @@ const MonthView: React.FC<MonthViewProps> = ({
     <div className="overflow-x-auto">
       <div
         id="persian-calendar-month-view-container"
-        className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 min-w-full min-h-dvh"
+        className="persian-calendar grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 min-w-full min-h-dvh"
       >
         {/* Days  */}
         {days.map((day, index) => (

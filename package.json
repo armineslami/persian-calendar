@@ -1,6 +1,6 @@
 {
   "name": "@armin-eslami/persian-calendar",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Big persian calendar component made by react.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "build": "rollup -c"
+    "build": "rm -rf dist && rollup -c"
   },
   "keywords": [
     "calendar",
@@ -53,6 +53,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
+    "postcss-prefix-selector": "^2.1.1",
     "rollup": "^4.41.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",

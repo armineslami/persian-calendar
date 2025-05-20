@@ -23,9 +23,13 @@ module.exports = {
       clean: true, // optional but useful
     }),
     postcss({
-      extract: true,
+      inject: true,
+      // extract: true,
       minimize: true,
       modules: false,
+      config: {
+        path: "./postcss.config.js",
+      },
     }),
   ],
 };

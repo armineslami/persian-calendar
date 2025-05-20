@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes year-slide {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-year-slide {
+    animation: year-slide 0.3s ease;
+  }
+
+  .month-row-text {
+    color: var(--text);
+}
+
+.month-row-text-hover:hover {
+    color: #fff;
+    background-color: var(--hover-bg);
+}

@@ -2,7 +2,6 @@ import React from "react";
 import YearViewProps from "./props/YearViewProps";
 import { cn } from "../../lib/utils";
 import { Day } from "../../props";
-import "./style.css";
 
 const YearView: React.FC<YearViewProps> = ({
   months,
@@ -43,7 +42,7 @@ const YearView: React.FC<YearViewProps> = ({
     <div
       id="persian-calendar-year-view-container"
       className={cn(
-        "grid grid-cols-1",
+        "persian-calendar grid grid-cols-1",
         getGridColsClass(gridColumnCount),
         " gap-6"
       )}
