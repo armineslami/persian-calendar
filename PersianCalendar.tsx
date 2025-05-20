@@ -7,7 +7,8 @@ import {
   PersianCalendarMode,
   Day,
 } from "./props";
-import moment from "moment-jalaali";
+// @ts-ignore
+const moment = require("moment-jalaali");
 import YearView from "./components/YearView/YearView";
 import MonthView from "./components/MonthView/MonthView";
 import Navbar from "./components/Navbar/Navbar";
@@ -19,6 +20,7 @@ import {
   getCurrentYear,
   toPersianDigits,
 } from "./lib/utils";
+import "./index.css";
 
 const defaultTheme: PersianCalendarTheme = {
   primary: "#6366f1",

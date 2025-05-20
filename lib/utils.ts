@@ -1,8 +1,9 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import moment from "moment-jalaali";
 import { PersianCalendarEvent, Day } from "../props";
 import { Month } from "../props/Month";
+// @ts-ignore
+const moment = require("moment-jalaali");
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

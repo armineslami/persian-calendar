@@ -5,7 +5,6 @@ interface YearViewProps {
   months: Month[];
   theme: PersianCalendarTheme;
   gridColumnCount: number;
-  className?: string;
   onDayClick?: (day: Day) => void;
 }
 

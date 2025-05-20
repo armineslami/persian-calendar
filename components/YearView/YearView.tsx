@@ -8,7 +8,6 @@ const YearView: React.FC<YearViewProps> = ({
   months,
   theme,
   gridColumnCount,
-  className,
   onDayClick,
 }) => {
   const dayTitles = [
@@ -21,10 +20,33 @@ const YearView: React.FC<YearViewProps> = ({
     { id: "7", title: "ج" },
   ];
 
+  function getGridColsClass(count: number) {
+    return (
+      {
+        1: "md:grid-cols-1",
+        2: "md:grid-cols-2",
+        3: "md:grid-cols-3",
+        4: "md:grid-cols-4",
+        5: "md:grid-cols-5",
+        6: "md:grid-cols-6",
+        7: "md:grid-cols-7",
+        8: "md:grid-cols-8",
+        9: "md:grid-cols-9",
+        10: "md:grid-cols-10",
+        11: "md:grid-cols-11",
+        12: "md:grid-cols-12",
+      }[count] ?? "md:grid-cols-3"
+    );
+  }
+
   return (
     <div
       id="persian-calendar-year-view-container"
-      className={`grid grid-cols-1 md:grid-cols-${gridColumnCount} gap-6`}
+      className={cn(
+        "grid grid-cols-1",
+        getGridColsClass(gridColumnCount),
+        " gap-6"
+      )}
     >
       {months.map((month, index) => (
         <div className="space-y-2" key={month.id * index * Math.random()}>
@@ -59,8 +81,7 @@ const YearView: React.FC<YearViewProps> = ({
                   className={cn(
                     "relative flex items-center justify-center font-bold rounded-full aspect-square w-full max-w-[40px] select-none",
                     "month-row-text",
-                    day.enabled && "month-row-text-hover cursor-pointer",
-                    className
+                    day.enabled && "month-row-text-hover cursor-pointer"
                   )}
                   style={
                     {

@@ -2,7 +2,9 @@
     "compilerOptions": {
       "outDir": "dist",
       "declaration": true,
+      "declarationDir": "dist",
       "jsx": "react-jsx",
+      "importHelpers": true,
       "module": "ESNext",
       "target": "ES5",
       "moduleResolution": "node",
