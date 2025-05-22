@@ -135,7 +135,7 @@ export function createMonthDays(
       active: formatted === todayJDate,
       enabled: true,
       isOffDay:
-        offDaysOfWeek.includes(date.day()) ||
+        offDaysOfWeek.includes(date.day() + 1) ||
         normalizedOffDates.includes(formatted),
       event: normalizedEvents.filter((event) => event.date === formatted),
       month: month,
