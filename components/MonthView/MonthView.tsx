@@ -44,7 +44,9 @@ const MonthView: React.FC<MonthViewProps> = ({
                 className="truncate flex justify-between items-center"
                 style={{
                   fontSize: theme.fontSize?.body,
-                  color: theme.textSecondary,
+                  color: day.isOffDay
+                    ? theme.colors!.offDayColor
+                    : theme.textSecondary,
                 }}
               >
                 <span>{dayTitles[(days.length + index) % 7].title}</span>
@@ -52,7 +54,11 @@ const MonthView: React.FC<MonthViewProps> = ({
                   className="flex items-center justify-center rounded-full aspect-square w-full max-w-[40px] "
                   style={{
                     backgroundColor: day.active ? theme.primary : undefined,
-                    color: day.active ? "#fff" : theme.textSecondary,
+                    color: day.active
+                      ? "#fff"
+                      : day.isOffDay
+                      ? theme.colors!.offDayColor
+                      : theme.textSecondary,
                   }}
                 >
                   {day.title}
